@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08r-tR-e2B">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="PWY-DG-Mle">
+            <objects>
+                <viewController id="08r-tR-e2B" customClass="HomeViewController" customModule="HabitWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xyw-zw-QbI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Habits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL7-Ib-xDa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-CL-VSo">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Habits" rowHeight="47" id="Cp2-sX-NPS" customClass="HabitCell" customModule="HabitWellness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="47"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cp2-sX-NPS" id="fvt-zx-Uun">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nL7-Ib-xDa" firstAttribute="leading" secondItem="UdV-bm-uMa" secondAttribute="leading" id="1Ob-dF-Twx"/>
+                            <constraint firstItem="nL7-Ib-xDa" firstAttribute="top" secondItem="UdV-bm-uMa" secondAttribute="top" id="3LD-vw-yq9"/>
+                            <constraint firstItem="eN9-CL-VSo" firstAttribute="top" secondItem="nL7-Ib-xDa" secondAttribute="bottom" id="94c-O0-grG"/>
+                            <constraint firstItem="eN9-CL-VSo" firstAttribute="leading" secondItem="UdV-bm-uMa" secondAttribute="leading" id="MPh-9A-KgZ"/>
+                            <constraint firstItem="UdV-bm-uMa" firstAttribute="trailing" secondItem="nL7-Ib-xDa" secondAttribute="trailing" id="NIT-nz-G4f"/>
+                            <constraint firstItem="UdV-bm-uMa" firstAttribute="bottom" secondItem="eN9-CL-VSo" secondAttribute="bottom" id="YrY-ZN-GoX"/>
+                            <constraint firstItem="eN9-CL-VSo" firstAttribute="trailing" secondItem="UdV-bm-uMa" secondAttribute="trailing" id="sz8-B4-0g5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UdV-bm-uMa"/>
+                    </view>
+                    <connections>
+                        <outlet property="habitTableView" destination="eN9-CL-VSo" id="40m-FH-KaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJP-RM-U9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.81159420289862" y="236.38392857142856"/>
+        </scene>
+    </scenes>
+</document>
